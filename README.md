@@ -4,13 +4,15 @@
 
 * Need to have Rails 5.0.1
 
-* run bundle install
+* run bundle install on console
 
-* run rails db:migrate
+* run rails db:migrate on console
 
-* For db:test run rails db:migrate RAILS_ENV=test
+* For Run APP: run rails s on console
 
-* How to run the test suite: rails test
+* For db:test run rails db:migrate RAILS_ENV=test on console
+
+* How to run the test suite: rails test on console
 
 * Models:   
   - Users: name, email, all required
