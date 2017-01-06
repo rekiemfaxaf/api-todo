@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version  ruby 2.2.4p230
 
-Things you may want to cover:
+* Need to have Rails 5.0.1
 
-* Ruby version
+* run bundle install
 
-* System dependencies
+* run rails db:migrate
 
-* Configuration
+* For db:test run rails db:migrate RAILS_ENV=test
 
-* Database creation
+* How to run the test suite: rails test
 
-* Database initialization
+* Models:   
+  - Users: name, email, all required
+  - Todos: title, description, state [0,1] "Pendeing" - "Resolve", user_id, all required
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Urls:
+  - GET   /api/v1/users/:user_id/to_dos(.:format)     api/v1/to_dos#index {:defualts=>{:format=>"json"}}
+  - POST  /api/v1/users/:user_id/to_dos(.:format)     api/v1/to_dos#create {:defualts=>{:format=>"json"}}
+  - GET   /api/v1/users/:user_id/to_dos/:id(.:format) api/v1/to_dos#show {:defualts=>{:format=>"json"}}
+  - PATCH /api/v1/users/:user_id/to_dos/:id(.:format) api/v1/to_dos#update {:defualts=>{:format=>"json"}}
+  - PUT   /api/v1/users/:user_id/to_dos/:id(.:format) api/v1/to_dos#update {:defualts=>{:format=>"json"}}
+  - GET   /api/v1/users(.:format)                     api/v1/users#index {:defualts=>{:format=>"json"}}
+  - POST  /api/v1/users(.:format)                     api/v1/users#create {:defualts=>{:format=>"json"}}
+  - GET   /api/v1/users/:id(.:format)                 api/v1/users#show {:defualts=>{:format=>"json"}}
+  - PATCH /api/v1/users/:id(.:format)                 api/v1/users#update {:defualts=>{:format=>"json"}}
+  - PUT   /api/v1/users/:id(.:format)                 api/v1/users#update {:defualts=>{:format=>"json"}}
