@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Tarea1
+  description: Tarea1
+  state: 0
+  user_id: one
+
+two:
+  title: Tarea2
+  description: Tarea2
+  state: 1
+  user_id: two
