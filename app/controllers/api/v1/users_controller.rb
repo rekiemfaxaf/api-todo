@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
-    render json: @users
+    render json: { users: User.all,  adapter: :json_api }
   end
 
   # GET /users/1

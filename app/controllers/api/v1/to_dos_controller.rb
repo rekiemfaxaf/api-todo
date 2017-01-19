@@ -4,8 +4,7 @@ class Api::V1::ToDosController < ApplicationController
 
   # GET /to_dos
   def index
-    @to_dos = ToDo.all
-    render json: @to_dos
+    render json:  { to_do: ToDo.all,  adapter: :json_api }
   end
 
   # GET /to_dos/1
